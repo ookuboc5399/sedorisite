@@ -1,1 +1,2 @@
 # sedorisite
+# django-startup

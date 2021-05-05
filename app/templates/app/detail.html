@@ -1,42 +1,572 @@
-{% extends "app/base.html" %}
+<html lang="ja" class=" "><head>
+    
+    
+    <title>店舗リスト | Django Startup</title>
+    
+    <link href="/fontawesome/css/all.min.css" rel="stylesheet" as="style" onload="this.rel='stylesheet'">
+    <link rel="icon" href="/svg/Beyond.svg">
+    
+    
+    
+    
+    
+    
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.3ba5c4f3.css" as="style"><link rel="preload" href="/assets/js/app.5eb017d2.js" as="script"><link rel="preload" href="/assets/js/2.9a83a554.js" as="script"><link rel="preload" href="/assets/js/77.d40f6468.js" as="script"><link rel="preload" href="/assets/js/4.ac96a480.js" as="script"><link rel="prefetch" href="/assets/js/10.5bbab024.js"><link rel="prefetch" href="/assets/js/100.f8ef64ec.js"><link rel="prefetch" href="/assets/js/101.8577a333.js"><link rel="prefetch" href="/assets/js/102.1160d984.js"><link rel="prefetch" href="/assets/js/103.b9bd7b66.js"><link rel="prefetch" href="/assets/js/104.f95b268f.js"><link rel="prefetch" href="/assets/js/105.126febf9.js"><link rel="prefetch" href="/assets/js/106.fe78e5e4.js"><link rel="prefetch" href="/assets/js/107.d199b167.js"><link rel="prefetch" href="/assets/js/108.1c09770a.js"><link rel="prefetch" href="/assets/js/109.b5667698.js"><link rel="prefetch" href="/assets/js/11.32d282fd.js"><link rel="prefetch" href="/assets/js/110.87c09957.js"><link rel="prefetch" href="/assets/js/111.6ee2dadc.js"><link rel="prefetch" href="/assets/js/112.ca7032e3.js"><link rel="prefetch" href="/assets/js/113.936aea8e.js"><link rel="prefetch" href="/assets/js/114.9f828084.js"><link rel="prefetch" href="/assets/js/115.66b0190e.js"><link rel="prefetch" href="/assets/js/116.f2ad7cc5.js"><link rel="prefetch" href="/assets/js/117.30c46fc0.js"><link rel="prefetch" href="/assets/js/118.e0fdd493.js"><link rel="prefetch" href="/assets/js/119.e6d00b2a.js"><link rel="prefetch" href="/assets/js/12.c5aeb4d1.js"><link rel="prefetch" href="/assets/js/120.07716d6f.js"><link rel="prefetch" href="/assets/js/121.20407362.js"><link rel="prefetch" href="/assets/js/122.ed6026d4.js"><link rel="prefetch" href="/assets/js/123.dbf4257a.js"><link rel="prefetch" href="/assets/js/124.1e2392df.js"><link rel="prefetch" href="/assets/js/125.55033f95.js"><link rel="prefetch" href="/assets/js/126.53d6966f.js"><link rel="prefetch" href="/assets/js/127.1c2106a0.js"><link rel="prefetch" href="/assets/js/128.8a61e9c0.js"><link rel="prefetch" href="/assets/js/129.245e505b.js"><link rel="prefetch" href="/assets/js/13.2a24bacf.js"><link rel="prefetch" href="/assets/js/130.f64b22b7.js"><link rel="prefetch" href="/assets/js/131.7ab17505.js"><link rel="prefetch" href="/assets/js/132.c14f9c45.js"><link rel="prefetch" href="/assets/js/133.2e2029c8.js"><link rel="prefetch" href="/assets/js/134.41ebbbe1.js"><link rel="prefetch" href="/assets/js/135.70d93f0b.js"><link rel="prefetch" href="/assets/js/136.b69d52e1.js"><link rel="prefetch" href="/assets/js/137.6059e213.js"><link rel="prefetch" href="/assets/js/138.4e549285.js"><link rel="prefetch" href="/assets/js/139.8a52955c.js"><link rel="prefetch" href="/assets/js/14.58f596a1.js"><link rel="prefetch" href="/assets/js/140.81534f59.js"><link rel="prefetch" href="/assets/js/141.1ca4206b.js"><link rel="prefetch" href="/assets/js/142.b9605e82.js"><link rel="prefetch" href="/assets/js/143.7df319a5.js"><link rel="prefetch" href="/assets/js/144.b32a977f.js"><link rel="prefetch" href="/assets/js/145.4eaa804c.js"><link rel="prefetch" href="/assets/js/146.d97947c8.js"><link rel="prefetch" href="/assets/js/147.982594a5.js"><link rel="prefetch" href="/assets/js/148.f6fcfc31.js"><link rel="prefetch" href="/assets/js/149.76c16916.js"><link rel="prefetch" href="/assets/js/15.37ee3976.js"><link rel="prefetch" href="/assets/js/150.f5fb6ddd.js"><link rel="prefetch" href="/assets/js/151.ef5af133.js"><link rel="prefetch" href="/assets/js/152.1bd842d4.js"><link rel="prefetch" href="/assets/js/153.26ccfdd5.js"><link rel="prefetch" href="/assets/js/154.e3fa72dd.js"><link rel="prefetch" href="/assets/js/155.0616c7fa.js"><link rel="prefetch" href="/assets/js/156.b769bdfc.js"><link rel="prefetch" href="/assets/js/157.20f7b11f.js"><link rel="prefetch" href="/assets/js/158.65d23405.js"><link rel="prefetch" href="/assets/js/159.abffcb8e.js"><link rel="prefetch" href="/assets/js/16.ecf2c78d.js"><link rel="prefetch" href="/assets/js/160.53a4df85.js"><link rel="prefetch" href="/assets/js/161.ee4be36a.js"><link rel="prefetch" href="/assets/js/162.8ce03e12.js"><link rel="prefetch" href="/assets/js/163.29db310c.js"><link rel="prefetch" href="/assets/js/164.ae5b81fc.js"><link rel="prefetch" href="/assets/js/165.62064c4d.js"><link rel="prefetch" href="/assets/js/166.05fc4c1c.js"><link rel="prefetch" href="/assets/js/167.8b0d9aae.js"><link rel="prefetch" href="/assets/js/168.913fceb1.js"><link rel="prefetch" href="/assets/js/169.5e5b445b.js"><link rel="prefetch" href="/assets/js/17.657e7d78.js"><link rel="prefetch" href="/assets/js/170.249016ee.js"><link rel="prefetch" href="/assets/js/171.ee977829.js"><link rel="prefetch" href="/assets/js/172.a75de033.js"><link rel="prefetch" href="/assets/js/173.416f224b.js"><link rel="prefetch" href="/assets/js/174.68643d47.js"><link rel="prefetch" href="/assets/js/175.03e8aed2.js"><link rel="prefetch" href="/assets/js/176.71072e79.js"><link rel="prefetch" href="/assets/js/177.0e85c639.js"><link rel="prefetch" href="/assets/js/178.dfdd2cd5.js"><link rel="prefetch" href="/assets/js/179.fccf05a3.js"><link rel="prefetch" href="/assets/js/18.89fce9e9.js"><link rel="prefetch" href="/assets/js/180.f06a8b2e.js"><link rel="prefetch" href="/assets/js/181.3e5b0eb8.js"><link rel="prefetch" href="/assets/js/182.e87a894c.js"><link rel="prefetch" href="/assets/js/183.36c95317.js"><link rel="prefetch" href="/assets/js/184.f0d04b55.js"><link rel="prefetch" href="/assets/js/185.7cc8128c.js"><link rel="prefetch" href="/assets/js/186.3a69c644.js"><link rel="prefetch" href="/assets/js/187.19da6967.js"><link rel="prefetch" href="/assets/js/188.5e68ce4a.js"><link rel="prefetch" href="/assets/js/189.c2aeca7b.js"><link rel="prefetch" href="/assets/js/19.e5b2e1f1.js"><link rel="prefetch" href="/assets/js/190.4f3e7694.js"><link rel="prefetch" href="/assets/js/191.c71ea61b.js"><link rel="prefetch" href="/assets/js/192.0b68bb5c.js"><link rel="prefetch" href="/assets/js/193.2223059a.js"><link rel="prefetch" href="/assets/js/194.c7972060.js"><link rel="prefetch" href="/assets/js/195.af0e00f5.js"><link rel="prefetch" href="/assets/js/196.aa317be7.js"><link rel="prefetch" href="/assets/js/197.46675dd9.js"><link rel="prefetch" href="/assets/js/198.58a595d0.js"><link rel="prefetch" href="/assets/js/199.ece7a5bc.js"><link rel="prefetch" href="/assets/js/20.396c640b.js"><link rel="prefetch" href="/assets/js/200.565933d7.js"><link rel="prefetch" href="/assets/js/201.6f5a15e8.js"><link rel="prefetch" href="/assets/js/202.d0813f87.js"><link rel="prefetch" href="/assets/js/203.42f02148.js"><link rel="prefetch" href="/assets/js/204.dd3e538f.js"><link rel="prefetch" href="/assets/js/205.024ded37.js"><link rel="prefetch" href="/assets/js/206.1bdee16e.js"><link rel="prefetch" href="/assets/js/207.8b593632.js"><link rel="prefetch" href="/assets/js/208.b8b4b066.js"><link rel="prefetch" href="/assets/js/209.c81fffa8.js"><link rel="prefetch" href="/assets/js/21.21b67d51.js"><link rel="prefetch" href="/assets/js/210.ebc67a19.js"><link rel="prefetch" href="/assets/js/211.1dd6d0e8.js"><link rel="prefetch" href="/assets/js/212.2744652f.js"><link rel="prefetch" href="/assets/js/213.b62e9192.js"><link rel="prefetch" href="/assets/js/22.ec56bc88.js"><link rel="prefetch" href="/assets/js/23.f543759c.js"><link rel="prefetch" href="/assets/js/24.e0f55387.js"><link rel="prefetch" href="/assets/js/25.c91d100b.js"><link rel="prefetch" href="/assets/js/26.83934c47.js"><link rel="prefetch" href="/assets/js/27.9dbbf753.js"><link rel="prefetch" href="/assets/js/28.1c6510c0.js"><link rel="prefetch" href="/assets/js/29.9d6a93d2.js"><link rel="prefetch" href="/assets/js/3.4f6e92ca.js"><link rel="prefetch" href="/assets/js/30.97dc3578.js"><link rel="prefetch" href="/assets/js/31.8a997df2.js"><link rel="prefetch" href="/assets/js/32.989c235d.js"><link rel="prefetch" href="/assets/js/33.e1a6dbff.js"><link rel="prefetch" href="/assets/js/34.c1c0809c.js"><link rel="prefetch" href="/assets/js/35.43d4b704.js"><link rel="prefetch" href="/assets/js/36.b3ff2969.js"><link rel="prefetch" href="/assets/js/37.dd0bfa12.js"><link rel="prefetch" href="/assets/js/38.233a5910.js"><link rel="prefetch" href="/assets/js/39.f39f2ea4.js"><link rel="prefetch" href="/assets/js/40.21d1e9ec.js"><link rel="prefetch" href="/assets/js/41.f11a87d4.js"><link rel="prefetch" href="/assets/js/42.41795680.js"><link rel="prefetch" href="/assets/js/43.cd27b718.js"><link rel="prefetch" href="/assets/js/44.fd910278.js"><link rel="prefetch" href="/assets/js/45.f1f04cb5.js"><link rel="prefetch" href="/assets/js/46.160d928d.js"><link rel="prefetch" href="/assets/js/47.a84f575b.js"><link rel="prefetch" href="/assets/js/48.cffab61c.js"><link rel="prefetch" href="/assets/js/49.218b5522.js"><link rel="prefetch" href="/assets/js/5.322e75bf.js"><link rel="prefetch" href="/assets/js/50.0f00da7b.js"><link rel="prefetch" href="/assets/js/51.278e2bed.js"><link rel="prefetch" href="/assets/js/52.0d21577f.js"><link rel="prefetch" href="/assets/js/53.33101bc0.js"><link rel="prefetch" href="/assets/js/54.33b93288.js"><link rel="prefetch" href="/assets/js/55.d62a2997.js"><link rel="prefetch" href="/assets/js/56.558f1864.js"><link rel="prefetch" href="/assets/js/57.71dc529e.js"><link rel="prefetch" href="/assets/js/58.8a27e4af.js"><link rel="prefetch" href="/assets/js/59.063444a9.js"><link rel="prefetch" href="/assets/js/6.918f6efd.js"><link rel="prefetch" href="/assets/js/60.487d6389.js"><link rel="prefetch" href="/assets/js/61.924d599c.js"><link rel="prefetch" href="/assets/js/62.2dea361f.js"><link rel="prefetch" href="/assets/js/63.0a2266c7.js"><link rel="prefetch" href="/assets/js/64.b9b4fc42.js"><link rel="prefetch" href="/assets/js/65.69ab82dc.js"><link rel="prefetch" href="/assets/js/66.54ad196a.js"><link rel="prefetch" href="/assets/js/67.c19b8914.js"><link rel="prefetch" href="/assets/js/68.294e1495.js"><link rel="prefetch" href="/assets/js/69.65772b4f.js"><link rel="prefetch" href="/assets/js/7.5ecd1b06.js"><link rel="prefetch" href="/assets/js/70.83cdbfa8.js"><link rel="prefetch" href="/assets/js/71.13cb3f89.js"><link rel="prefetch" href="/assets/js/72.6f85181d.js"><link rel="prefetch" href="/assets/js/73.0c45b6b2.js"><link rel="prefetch" href="/assets/js/74.43c76117.js"><link rel="prefetch" href="/assets/js/75.210b461b.js"><link rel="prefetch" href="/assets/js/76.5ded098f.js"><link rel="prefetch" href="/assets/js/78.7fc70ad4.js"><link rel="prefetch" href="/assets/js/79.76636f6d.js"><link rel="prefetch" href="/assets/js/8.ff61a9da.js"><link rel="prefetch" href="/assets/js/80.b6f7eb32.js"><link rel="prefetch" href="/assets/js/81.7d3d28f1.js"><link rel="prefetch" href="/assets/js/82.b1768808.js"><link rel="prefetch" href="/assets/js/83.0e81dfd2.js"><link rel="prefetch" href="/assets/js/84.46e5ae38.js"><link rel="prefetch" href="/assets/js/85.c534aa50.js"><link rel="prefetch" href="/assets/js/86.fdcf510a.js"><link rel="prefetch" href="/assets/js/87.68d26299.js"><link rel="prefetch" href="/assets/js/88.aeb737fc.js"><link rel="prefetch" href="/assets/js/89.2f5ea97a.js"><link rel="prefetch" href="/assets/js/9.5af5c95a.js"><link rel="prefetch" href="/assets/js/90.cc1fa41e.js"><link rel="prefetch" href="/assets/js/91.3cbfc2f3.js"><link rel="prefetch" href="/assets/js/92.8dd7314f.js"><link rel="prefetch" href="/assets/js/93.db414aa6.js"><link rel="prefetch" href="/assets/js/94.fc6914b9.js"><link rel="prefetch" href="/assets/js/95.0a7509bf.js"><link rel="prefetch" href="/assets/js/96.79b6f9e1.js"><link rel="prefetch" href="/assets/js/97.de6d588d.js"><link rel="prefetch" href="/assets/js/98.0b1cafa4.js"><link rel="prefetch" href="/assets/js/99.bbc82c4b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3ba5c4f3.css">
+  <style type="text/css">.medium-zoom-overlay{position:fixed;top:0;right:0;bottom:0;left:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}</style><script async="" src="https://www.google-analytics.com/analytics.js"></script><script charset="utf-8" src="/assets/js/212.2744652f.js"></script><script charset="utf-8" src="/assets/js/213.b62e9192.js"></script><style id="_description_style"></style><script charset="utf-8" src="/assets/js/66.54ad196a.js"></script><script charset="utf-8" src="/assets/js/178.dfdd2cd5.js"></script><script charset="utf-8" src="/assets/js/126.53d6966f.js"></script><script charset="utf-8" src="/assets/js/58.8a27e4af.js"></script><script charset="utf-8" src="/assets/js/54.33b93288.js"></script><script charset="utf-8" src="/assets/js/53.33101bc0.js"></script><script charset="utf-8" src="/assets/js/52.0d21577f.js"></script><script charset="utf-8" src="/assets/js/51.278e2bed.js"></script><script charset="utf-8" src="/assets/js/50.0f00da7b.js"></script><script charset="utf-8" src="/assets/js/49.218b5522.js"></script><meta name="description" content="Djangoチュートリアル"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0"><meta name="twitter:card" content="summary"><meta name="twitter:description" content="Djangoチュートリアル"><meta property="og:type" content="website"><meta property="og:site_name" content="Django Startup"><meta property="og:title" content="Django Startup"><meta property="og:image" content="/svg/logo.svg"></head>
+  <body class="vsc-initialized" style="opacity: 1;">
+    <div id="app"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/svg/logo.svg" alt="Django Startup" class="logo"> <span class="site-name can-hide">Django Startup</span></a> <div class="links" style="max-width: 1046px;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value="" class="" placeholder=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  ホーム
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="チュートリアル" class="dropdown-title"><span class="title">チュートリアル</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/" class="nav-link">
+  ステップ1
+</a></li><li class="dropdown-item"><!----> <a href="/blog2/" class="nav-link">
+  ステップ2
+</a></li><li class="dropdown-item"><!----> <a href="/portfolio/" class="nav-link">
+  ステップ3
+</a></li><li class="dropdown-item"><!----> <a href="/custom/" class="nav-link">
+  ステップ4
+</a></li><li class="dropdown-item"><!----> <a href="/books/" class="nav-link">
+  ステップ5
+</a></li><li class="dropdown-item"><!----> <a href="/foodie/" class="nav-link">
+  ステップ6
+</a></li><li class="dropdown-item"><!----> <a href="/ec/" class="nav-link">
+  ステップ7
+</a></li><li class="dropdown-item"><!----> <a href="/booking/" class="nav-link router-link-active">
+  ステップ8
+</a></li><li class="dropdown-item"><!----> <a href="/firebase/" class="nav-link">
+  ステップ9
+</a></li><li class="dropdown-item"><!----> <a href="/chat/" class="nav-link">
+  ステップ10
+</a></li><li class="dropdown-item"><!----> <a href="/drf/" class="nav-link">
+  ステップ11
+</a></li><li class="dropdown-item"><!----> <a href="/heroku/" class="nav-link">
+  ステップ12
+</a></li><li class="dropdown-item"><!----> <a href="/vultr/" class="nav-link">
+  ステップ13
+</a></li></ul></div></div><div class="nav-item"><a href="/advanced/" class="nav-link">
+  実践編
+</a></div><div class="nav-item"><a href="/extra/" class="nav-link">
+  番外編
+</a></div><div class="nav-item"><a href="https://twitter.com/hathle" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Twitter
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  ホーム
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="チュートリアル" class="dropdown-title"><span class="title">チュートリアル</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/" class="nav-link">
+  ステップ1
+</a></li><li class="dropdown-item"><!----> <a href="/blog2/" class="nav-link">
+  ステップ2
+</a></li><li class="dropdown-item"><!----> <a href="/portfolio/" class="nav-link">
+  ステップ3
+</a></li><li class="dropdown-item"><!----> <a href="/custom/" class="nav-link">
+  ステップ4
+</a></li><li class="dropdown-item"><!----> <a href="/books/" class="nav-link">
+  ステップ5
+</a></li><li class="dropdown-item"><!----> <a href="/foodie/" class="nav-link">
+  ステップ6
+</a></li><li class="dropdown-item"><!----> <a href="/ec/" class="nav-link">
+  ステップ7
+</a></li><li class="dropdown-item"><!----> <a href="/booking/" class="nav-link router-link-active">
+  ステップ8
+</a></li><li class="dropdown-item"><!----> <a href="/firebase/" class="nav-link">
+  ステップ9
+</a></li><li class="dropdown-item"><!----> <a href="/chat/" class="nav-link">
+  ステップ10
+</a></li><li class="dropdown-item"><!----> <a href="/drf/" class="nav-link">
+  ステップ11
+</a></li><li class="dropdown-item"><!----> <a href="/heroku/" class="nav-link">
+  ステップ12
+</a></li><li class="dropdown-item"><!----> <a href="/vultr/" class="nav-link">
+  ステップ13
+</a></li></ul></div></div><div class="nav-item"><a href="/advanced/" class="nav-link">
+  実践編
+</a></div><div class="nav-item"><a href="/extra/" class="nav-link">
+  番外編
+</a></div><div class="nav-item"><a href="https://twitter.com/hathle" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Twitter
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/booking/" class="sidebar-link">予約サイトシステム構築</a></li><li><a href="/booking/01_ready.html" class="sidebar-link">準備</a></li><li><a href="/booking/02_accounts.html" class="sidebar-link">プロフィール情報変更</a></li><li><a href="/booking/03_store.html" class="active sidebar-link">店舗リスト</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/booking/03_store.html#モデル" class="active sidebar-link">モデル</a></li><li class="sidebar-sub-header"><a href="/booking/03_store.html#admin" class="sidebar-link">Admin</a></li><li class="sidebar-sub-header"><a href="/booking/03_store.html#マイグレーション実行" class="sidebar-link">マイグレーション実行</a></li><li class="sidebar-sub-header"><a href="/booking/03_store.html#データ追加" class="sidebar-link">データ追加</a></li><li class="sidebar-sub-header"><a href="/booking/03_store.html#url" class="sidebar-link">URL</a></li><li class="sidebar-sub-header"><a href="/booking/03_store.html#ビュー" class="sidebar-link">ビュー</a></li><li class="sidebar-sub-header"><a href="/booking/03_store.html#テンプレート" class="sidebar-link">テンプレート</a></li><li class="sidebar-sub-header"><a href="/booking/03_store.html#css" class="sidebar-link">CSS</a></li><li class="sidebar-sub-header"><a href="/booking/03_store.html#確認" class="sidebar-link">確認</a></li></ul></li><li><a href="/booking/04_staff.html" class="sidebar-link">スタッフリスト</a></li><li><a href="/booking/05_calendar.html" class="sidebar-link">カレンダー</a></li><li><a href="/booking/06_booking.html" class="sidebar-link">予約機能</a></li><li><a href="/booking/07_thanks.html" class="sidebar-link">予約完了</a></li><li><a href="/booking/08_mypage.html" class="sidebar-link">スタッフ専用</a></li><li><a href="/booking/09_holiday.html" class="sidebar-link">休日設定</a></li><li><a href="/booking/10_delete.html" class="sidebar-link">予約削除</a></li><li><a href="/booking/99_finish.html" class="sidebar-link">おわりに</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="店舗リスト"><a href="#店舗リスト" class="header-anchor">#</a> 店舗リスト</h1> <p>トップページに店舗リストを作成します。</p> <h2 id="モデル"><a href="#モデル" class="header-anchor">#</a> モデル</h2> <p>店舗モデルを作成します。</p> <p>名前、住所、電話番号、説明、イメージ画像のフィールドを追加していきます。</p> <div class="code-caption"><img src="/svg/code.svg" class="fa-icon medium-zoom-image"><span class="code-caption-label">app/models.py</span></div> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+
+
+<span class="token keyword">class</span> <span class="token class-name">Store</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    name <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span><span class="token string">'店舗'</span><span class="token punctuation">,</span> max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+    address <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span><span class="token string">'住所'</span><span class="token punctuation">,</span> max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> null<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    tel <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span><span class="token string">'電話番号'</span><span class="token punctuation">,</span> max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> null<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    description <span class="token operator">=</span> models<span class="token punctuation">.</span>TextField<span class="token punctuation">(</span><span class="token string">'説明'</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    image <span class="token operator">=</span> models<span class="token punctuation">.</span>ImageField<span class="token punctuation">(</span>upload_to<span class="token operator">=</span><span class="token string">'images'</span><span class="token punctuation">,</span> verbose_name<span class="token operator">=</span><span class="token string">'イメージ画像'</span><span class="token punctuation">,</span> null<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>name
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="admin"><a href="#admin" class="header-anchor">#</a> Admin</h2> <p>管理画面でデータを登録できるようにします。</p> <div class="code-caption"><img src="/svg/code.svg" class="fa-icon medium-zoom-image"><span class="code-caption-label">app/admin.py</span></div> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Store
+
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Store<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="マイグレーション実行"><a href="#マイグレーション実行" class="header-anchor">#</a> マイグレーション実行</h2> <p>モデルを追加したので、マイグレーションが必要になります。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(myvenv) ~$ python3 manage.py makemigrations
+(myvenv) ~$ python3 manage.py migrate
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="データ追加"><a href="#データ追加" class="header-anchor">#</a> データ追加</h2> <p>管理画面でstoreモデルに店舗データを追加します。</p> <p>何件か登録しておくとレイアウトがしやすくなります。</p> <h2 id="url"><a href="#url" class="header-anchor">#</a> URL</h2> <p>トップページのURLを作成します。</p> <div class="code-caption"><img src="/svg/code.svg" class="fa-icon medium-zoom-image"><span class="code-caption-label">app/urls.py</span></div> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> path
+<span class="token keyword">from</span> app <span class="token keyword">import</span> views
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    path<span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>StoreView<span class="token punctuation">.</span>as_view<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'store'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="ビュー"><a href="#ビュー" class="header-anchor">#</a> ビュー</h2> <p>店舗リストはすべての店舗を表示させます。</p> <div class="code-caption"><img src="/svg/code.svg" class="fa-icon medium-zoom-image"><span class="code-caption-label">app/views.py</span></div> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> app<span class="token punctuation">.</span>models <span class="token keyword">import</span> Store
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>views<span class="token punctuation">.</span>generic <span class="token keyword">import</span> View
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>shortcuts <span class="token keyword">import</span> render
+
+
+<span class="token keyword">class</span> <span class="token class-name">StoreView</span><span class="token punctuation">(</span>View<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        store_data <span class="token operator">=</span> Store<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">'app/store.html'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            <span class="token string">'store_data'</span><span class="token punctuation">:</span> store_data<span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="コード解説"><a href="#コード解説" class="header-anchor">#</a> コード解説</h3> <p><code>.all()</code>を使用することで、すべてのデータを取得することができます。</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code>store_data <span class="token operator">=</span> Store<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="テンプレート"><a href="#テンプレート" class="header-anchor">#</a> テンプレート</h2> <h3 id="base"><a href="#base" class="header-anchor">#</a> base</h3> <p>ベースのテンプレートを作成します。</p> <p>レイアウトはBootstrap、アイコンはFontAwesomeを使用しています。</p> <div class="code-caption"><img src="/svg/code.svg" class="fa-icon medium-zoom-image"><span class="code-caption-label">app/templates/app/base.html</span></div> <div class="language-html line-numbers-mode"><pre class="language-html"><code>{% load static %}
+
+<span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ja<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{% static 'css/style.css' %}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>予約サイトチュートリアル<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar navbar-expand-lg navbar-dark bg-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-brand<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>予約サイト<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navbar-nav ml-auto<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>ホーム<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                {% if user.is_authenticated %}
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{% url 'profile' %}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>プロフィール<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{% url 'account_logout' %}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>ログアウト<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                {% else %}
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{% url 'account_signup' %}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>スタッフ<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav-link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{% url 'account_login' %}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>ログイン<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+                {% endif %}
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            {% block content %}
+            {% endblock %}
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>py-2 bg-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>m-0 text-center text-white<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Copyright <span class="token entity" title="&amp;copy;">&amp;copy;</span> Django Startup 2020<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">&gt;</span></span>
+
+    {% block extra_js %}
+    {% endblock %}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br></div></div><h3 id="store"><a href="#store" class="header-anchor">#</a> store</h3> <p>店舗リストのテンプレートを作成します。</p> <p>データベースから店舗データを表示します。</p> <div class="code-caption"><img src="/svg/code.svg" class="fa-icon medium-zoom-image"><span class="code-caption-label">app/templates/app/store.html</span></div> <div class="language-html line-numbers-mode"><pre class="language-html"><code>{% extends "app/base.html" %}
 
 {% block content %}
 
-<h3 class="mb-4">{{ work_data.title }}</h3>
-<div class="card top mb-4">
-    <img src="{{ work_data.image.url }}" alt="">
-</div>
-
-<div class="row">
-    <div class="col-sm-4 mb-4">
-        <h4 class="mb-3">INFORMATION</h4>
-        <p>
-            <i class="fas fa-laptop-code mr-2"></i>
-            <span class="font-weight-bolder">SKILLS : </span>
-            {{ work_data.skill }}
-        </p>
-        <hr>
-        <p>
-            <i class="fab fa-github mr-2"></i>
-            <span class="font-weight-bolder">GITHUB : </span>
-            {% if work_data.url %}
-                <a class="link-color" href="{{ work_data.url }}" target="_blank">Link</a>
-            {% else %}
-                Private
-            {% endif %}
-        </p>
-        <hr>
-        <p>
-            <i class="far fa-calendar-alt mr-2"></i>
-            <span class="font-weight-bolder">CREATED : </span>
-            {{ work_data.created }}
-        </p>
-        <hr>
-    </div>
-    <div class="col-sm-8 mb-5">
-        <h4 class="mb-3">PROJECT DESCRIPTION</h4>
-        <p>{{ work_data.description|linebreaksbr }}</p>
-    </div>
-</div>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text-center my-5<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mb-5<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>店舗一覧<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        {% for store in store_data %}
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col-lg-3 col-md-6<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>card img-thumbnail storelist mb-3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>card-img-top card-thum<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/{{ store.image.url }}<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>card-body text-center px-2 py-3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>font-weight-bold<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{ store.name }}店<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">&gt;</span></span>
+                        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{ store.address }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stretched-link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        {% empty %}
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>まだ店舗がありません<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+        {% endfor %}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 
 {% endblock %}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><h2 id="css"><a href="#css" class="header-anchor">#</a> CSS</h2> <p>CSSで店舗リスト画面を装飾します。</p> <div class="code-caption"><img src="/svg/code.svg" class="fa-icon medium-zoom-image"><span class="code-caption-label">app/static/css/style.css</span></div> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token comment">/* base */</span>
+
+<span class="token selector">body</span> <span class="token punctuation">{</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> #F1F1F1<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">flex-flow</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+    <span class="token property">min-height</span><span class="token punctuation">:</span> 100vh<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">main</span> <span class="token punctuation">{</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* store */</span>
+
+<span class="token selector">.storelist img</span> <span class="token punctuation">{</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+    <span class="token property">object-fit</span><span class="token punctuation">:</span> contain<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="確認"><a href="#確認" class="header-anchor">#</a> 確認</h2> <p>トップページを表示すると、このような画面になりますので、確認してください。</p> <p><img src="/booking/store.png" alt="店舗リスト" class="medium-zoom-image"></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">3ヶ月前</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/booking/02_accounts.html" class="prev"><i class="fas fa-angle-left" style="padding-left: 0.3rem;"></i>
+        プロフィール情報変更
+      </a></span> <span class="next"><a href="/booking/04_staff.html" class="">
+        スタッフリスト
+        <i class="fas fa-angle-right" style="padding-right:.3rem;"></i></a></span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.5eb017d2.js" defer=""></script><script src="/assets/js/2.9a83a554.js" defer=""></script><script src="/assets/js/77.d40f6468.js" defer=""></script><script src="/assets/js/4.ac96a480.js" defer=""></script>
+  
+
+<link href="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/css/free.css" rel="stylesheet"><link href="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/paid/css/paidStyle.css" rel="stylesheet"><div class="image_view keeper_close"></div><div id="mn_float_doc_menu_view"></div><link rel="stylesheet" href="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/css/sizeType002.css"><div id="mn_ex_content_float_doc_menu_view"></div><link rel="stylesheet" href="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/css/sizeType002.css"><div class="image_view keeper_close"></div><div id="ms_ex_modal_content_wrapper"></div><div id="mns_content_field" class="bottom downer_hide" style="z-index: 2147483647 !important; bottom: -75px;">
+        <div class="mns_container_wrapper">
+            <link href="" target="_blank" rel="stylesheet">
+
+            
+            
+            
+            
+
+            
+            
+
+        <section class="mns_image_search_section" data-an-comp="image_container" style="">
+                <div class="mns_container_icon_wrapper mns_image_btn_wrapper">
+                    <div id="mns_image_btn">
+                        <img class="mns_container_img" src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/icon_img/imageContainerIcon.png">
+                    </div>
+
+                    <div id="mns_image_reset_area" title="イメージ検索を解除します" data-an-func="reset_image" data-an-type="button">
+                        <div id="mns_image_reset" style="visibility: hidden;">
+                            <img class="mns_container_img" src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/icon_img/reloadIcon.png">
+                        </div>
+                    <div class="__description">クリックですることで、リンクボタンの画像検索状態を解除します</div></div>
+                </div>
+                <div class="mns_choice_image_area" title="クリックすることで、リンクボタンが画像検索に切り替わります" data-an-func="priority_image" data-an-type="button">
+                    <a>
+                        <img class="" src="https://djangostartup.com/booking//svg/logo.svg" style="background-image: url(&quot;https://djangostartup.com/booking//svg/logo.svg&quot;);">
+                    </a>
+                <div class="__description">クリックすることで、リンクボタンが画像検索に切り替わります</div></div>
+            </section><section class="mns_description_text_section" id="text_section" data-an-comp="text_container" style="">
+                <div class="mns_container_icon_wrapper">
+                    <div id="mns_text_btn">
+                        <img class="mns_container_img" src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/icon_img/textContainerIcon.png">
+                    </div>
+                    <div id="mns_text_reset_area" title="キーワードを初期状態に戻します">
+                        <div id="mns_text_reset" data-an-func="text_reset" data-an-type="button" class="blinking">
+                            <img class="mns_container_img" src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/icon_img/reloadIcon.png">
+                        </div>
+                    <div class="__description">キーワードを初期状態に戻します</div></div>
+                </div>
+                <dl class="mns_description_text_area">
+                    <dt id="mns_text_title">
+                    </dt>
+                    <dd id="mns_text" data-clipboard-text=".storelist img {
+    height: 150px;
+    object-fit: contain;
+}">
+                        <div class="mns_text_content">.storelist img {
+    height: 150px;
+    object-fit: contain;
+}</div>
+                        <textarea class="mns_text_inp __hide"></textarea>
+                    </dd>
+                </dl>
+                <div class="__description" id="MainDocTemplateKeywordDescriptionMsg">テキストを選択することで、キーワードを絞り込めます</div>
+                <section class="keyword_change_field_open_area" data-an-func="keyword_change_open" data-an-type="button" style="display: block;">
+                    <img src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/icon_img/title_edit_open.png" class="mns_container_img"><span id="MainDocTemplateKeywordChangeFieldMsg">キーワード編集</span>
+                </section>
+            </section><div id="mns_btn_list_wrapper" class="" data-an-comp="link_list_container" style="width: 729px;">
+                <div class="mns_container_icon_wrapper">
+                    <div id="mns_link_list_btn">
+                        <img class="mns_container_img" src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/icon_img/linklistContainerIcon.png">
+                    </div>
+                </div>
+                <ul id="mns_sc_link_list">
+                <li class="_disable_btn" data-multiplecoupon="0" text="アマゾン(ASIN):トップページを表示します"><a target="_blank" data-href="https://www.amazon.co.jp" data-imagetarget="amazon.co.jp" data-an-olink="amazon.co.jp" data-an-type="button"><span class="hoge itemCodeType"></span><span class="link_list_site_name">アマゾン(ASIN)</span></a><div class="__description">アマゾン(ASIN):トップページを表示します</div><div class="_mn_site_favicon_img_wrapper"><img src="https://www.amazon.co.jp/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="1" text="アマゾン(キーワード検索):.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="https://www.amazon.co.jp/s/ref=nb_sb_noss_2?field-keywords=.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="amazon.co.jp" data-an-olink="amazon.co.jp" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">アマゾン(キーワード検索)</span></a><div class="__description">アマゾン(キーワード検索):.storelist img {</div><div class="_mn_site_favicon_img_wrapper"><img src="https://www.amazon.co.jp/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="1" text="楽天市場:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="http://search.rakuten.co.jp/search/mall/.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D/?s=2" data-imagetarget="rakuten.co.jp" data-an-olink="rakuten.co.jp" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">楽天市場</span></a><div class="__description">楽天市場:.storelist img {
+    heig</div><div class="_mn_site_favicon_img_wrapper"><img src="https://search.rakuten.co.jp/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="1" text="ヤフーショッピング:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="http://search.shopping.yahoo.co.jp/search?p=.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D&amp;X=2" data-imagetarget="yahoo.co.jp" data-an-olink="yahoo.co.jp" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">ヤフーショッピング</span></a><div class="__description">ヤフーショッピング:.storelist img {
+   </div><div class="_mn_site_favicon_img_wrapper"><img src="https://search.shopping.yahoo.co.jp/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="1" text="ヤフオク:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="http://auctions.search.yahoo.co.jp/search?p=.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="yahoo.co.jp" data-an-olink="yahoo.co.jp" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">ヤフオク</span></a><div class="__description">ヤフオク:.storelist img {
+    heig</div><div class="_mn_site_favicon_img_wrapper _mn_site_favicon_hide"><img src="https://auctions.search.yahoo.co.jp/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="1" text="メルカリ:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="https://www.mercari.com/jp/search/?keyword=.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="mercari.com" data-an-olink="mercari.com" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">メルカリ</span></a><div class="__description">メルカリ:.storelist img {
+    heig</div><div class="_mn_site_favicon_img_wrapper"><img src="https://www.mercari.com/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="_disable_btn" data-multiplecoupon="0" text="アマレビュー:トップページを表示します"><a target="_blank" data-href="https://www.amazon.co.jp" data-imagetarget="amazon.co.jp" data-an-olink="amazon.co.jp" data-an-type="button"><span class="hoge itemCodeType"></span><span class="link_list_site_name">アマレビュー</span></a><div class="__description">アマレビュー:トップページを表示します</div><div class="_mn_site_favicon_img_wrapper"><img src="https://www.amazon.co.jp/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="1" text="モノレート:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="https://mnrate.com/search?i=All&amp;kwd=.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="mnrate.com" data-an-olink="mnrate.com" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">モノレート</span></a><div class="__description">モノレート:.storelist img {
+    hei</div><div class="_mn_site_favicon_img_wrapper"><img src="https://mnrate.com/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="1" text="モノサーチ:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="http://mnsearch.com/search?i=All&amp;kwd=.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="mnsearch.com" data-an-olink="mnsearch.com" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">モノサーチ</span></a><div class="__description">モノサーチ:.storelist img {
+    hei</div><div class="_mn_site_favicon_img_wrapper"><img src="https://mnsearch.com/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="1" text="price2alert:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="http://price2alert.com/search?i=All&amp;kwd=.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="price2alert.com" data-an-olink="price2alert.com" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">price2alert</span></a><div class="__description">price2alert:.storelist img {
+ </div><div class="_mn_site_favicon_img_wrapper"><img src="https://price2alert.com/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="0" text="ニュース Yahoo:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="http://news.search.yahoo.co.jp/search?p=.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="yahoo.co.jp" data-an-olink="yahoo.co.jp" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">ニュース Yahoo</span></a><div class="__description">ニュース Yahoo:.storelist img {
+  </div><div class="_mn_site_favicon_img_wrapper _mn_site_favicon_hide"><img src="https://news.search.yahoo.co.jp/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="0" text="Twitter:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="https://twitter.com/search?q=.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="twitter.com" data-an-olink="twitter.com" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">Twitter</span></a><div class="__description">Twitter:.storelist img {
+    h</div><div class="_mn_site_favicon_img_wrapper"><img src="https://twitter.com/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="0" text="Youtube:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="https://www.youtube.com/results?search_query=.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="youtube.com" data-an-olink="youtube.com" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">Youtube</span></a><div class="__description">Youtube:.storelist img {
+    h</div><div class="_mn_site_favicon_img_wrapper"><img src="https://www.youtube.com/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="0" text="Google JP:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="https://www.google.co.jp/search?q=.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="google.co.jp" data-an-olink="google.co.jp" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">Google JP</span></a><div class="__description">Google JP:.storelist img {
+   </div><div class="_mn_site_favicon_img_wrapper"><img src="https://www.google.co.jp/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="0" text="Wikipedia JP:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="http://ja.wikipedia.org/wiki/.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="wikipedia.org" data-an-olink="wikipedia.org" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">Wikipedia JP</span></a><div class="__description">Wikipedia JP:.storelist img {
+</div><div class="_mn_site_favicon_img_wrapper"><img src="https://ja.wikipedia.org/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="0" text="weblio辞書:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="http://www.weblio.jp/content/.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="weblio.jp" data-an-olink="weblio.jp" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">weblio辞書</span></a><div class="__description">weblio辞書:.storelist img {
+    </div><div class="_mn_site_favicon_img_wrapper"><img src="https://www.weblio.jp/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="0" text="日 Google翻訳:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="https://translate.google.co.jp/?#auto/ja/.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="google.co.jp" data-an-olink="google.co.jp" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">日 Google翻訳</span></a><div class="__description">日 Google翻訳:.storelist img {
+  </div><div class="_mn_site_favicon_img_wrapper"><img src="https://translate.google.co.jp/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li><li class="text" data-multiplecoupon="0" text="英 Google翻訳:.storelist img {
+    height%3A 150px%3B
+    object-fit%3A contain%3B
+}"><a target="_blank" data-href="https://translate.google.co.jp/?#auto/en/.storelist%20img%20%7B%0A%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20object-fit%3A%20contain%3B%0A%7D" data-imagetarget="google.co.jp" data-an-olink="google.co.jp" data-an-type="button"><span class="hoge itemCodeType">TEXT</span><span class="link_list_site_name">英 Google翻訳</span></a><div class="__description">英 Google翻訳:.storelist img {
+  </div><div class="_mn_site_favicon_img_wrapper"><img src="https://translate.google.co.jp/favicon.ico" class="_mn_site_favicon_img mns_container_img"></div></li></ul>
+                <div id="mns_link_btn_all">
+                    <a id="MainDocTemplateMultipleOpenLinkBtn">まとめて</a>
+                <div class="__description">MultipleLink 登録されているサイトすべてを一括で開きます</div></div>
+            </div><section class="mns_description_price_section _mns_container" data-an-comp="price_container" style="width: 0px;">
+                <a target="_blank" data-an-olink="amazon_new_price" data-an-type="frame" class="__hide">
+                    <div class="mns_container_icon_wrapper mns_condition_new_btn_wrapper">
+                        <div id="mns_condition_new_btn">
+                            <img class="mns_container_img">
+                        </div>
+                    </div>
+                    <dl class="mns_description_price_area _new_col">
+                        <dt id="mns_new_title" class="MainDocTemplatePriceNewLowerPriceTitle">
+                            新品最安値:
+                        </dt>
+                        <dd class="__hide">
+                            <span id="mns_new_price" class="_new_col">
+                                -
+                            </span>(
+                            <span id="mns_new_total">
+                                -
+                            </span><span class="MainDocTemplatePriceExhibitTitle"></span>)
+                        </dd>
+                    </dl>
+                </a>
+                <a target="_blank" data-an-olink="amazon_used_price" data-an-type="frame" class="__hide">
+                    <div class="mns_container_icon_wrapper mns_condition_used_btn_wrapper">
+                        <div id="mns_condition_used_btn">
+                            <img class="mns_container_img">
+                        </div>
+
+                    </div>
+                    <dl class="mns_description_price_area _used_col">
+                        <dt id="mns_used_title" class="MainDocTemplatePriceUsedLowerPriceTitle">
+                            中古最安値:
+                        </dt>
+                        <dd class="__hide">
+                            <span id="mns_used_price" class="_used_col">
+                                -
+                            </span>(
+                            <span id="mns_used_total">
+                                -
+                            </span><span class="MainDocTemplatePriceExhibitTitle"></span>)
+                        </dd>
+                    </dl>
+                </a>
+            </section><section class="mns_description_code_section _mns_container" data-an-comp="code_container" style="display: none; width: 0px;">
+                <div class="mns_container_icon_wrapper " data-an-over-func="barcode_change" data-an-type="image">
+                    <div id="mns_code_btn">
+                        <img class="mns_container_img" src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/icon_img/codeContainerIcon.png">
+                    </div>
+
+                </div>
+                <dl class="mns_description_code_area">
+
+                    <dt id="mns_asin_title">
+                        <span id="MainDocTemplateCodeASINTitle">ASIN:&nbsp;</span>
+                    </dt>
+                    <dd id="mns_asin" data-an-func="asin" data-an-type="button">
+                        <input type="text">
+                    </dd>
+                    　
+                    <dt id="mns_ean_title">
+                        <span id="MainDocTemplateCodeEANTitle">EAN:&nbsp;</span>
+                    </dt>
+                    <dd id="mns_ean" data-an-func="ean" data-an-type="button">
+                        <input type="text">
+                    </dd>
+                </dl>
+            <div class="__description">クリックするでコピーできます</div><div id="barcodeView"></div></section><section class="mns_description_ranking_section _mns_container" data-an-comp="ranking_container" style="display: none; width: 0px;">
+                <div class="mns_container_icon_wrapper">
+                    <div id="mns_ranking_btn">
+                        <img class="mns_container_img" src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/icon_img/rankingContainerIcon.png">
+                    </div>
+                </div>
+                <dl class="mns_description_ranking_area">
+                    <dt id="mns_rank_title">
+                        <span class="MainDocTemplatePriceRankingTitle">ランキング</span>:
+                    <span id="mns_SalesRank">
+
+                    </span>
+                        <span id="MainDocTemplatePriceRankingSuffix">
+                        位
+                        </span>
+                    </dt>
+                    <dd class="clear">
+                        <span id="mns_sales_rank_category"></span>
+                    </dd>
+                </dl>
+            </section></div>
+        <section class="setting init" data-an-comp="setting">
+            <div id="modalBookMarkOpenBtn" data-ms-ex-ad-st="item_bookmark_button" data-ms-ex-ad-st-type="0" style="display: none">
+                <img alt="商品ウォッチ" class="modal_icon" src="data:image/png;base64,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">
+
+            <div class="__description">商品ウォッチの一覧を表示します。登録した商品は、自動で色々なサイトの価格をアマゾン価格と比較して、利益が出る商品だけを通知できます</div></div>
+            <div id="modalSellerBookMarkOpenBtn" data-ms-ex-ad-st="seller_bookmark_button" data-ms-ex-ad-st-type="0" style="display: none">
+                <img alt="出品者ウォッチ" class="modal_icon" src="data:image/png;base64,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">
+            <div class="__description">出品者ウォッチの一覧を表示します。登録した出品者は、入荷・出荷が自動的に追跡されます</div></div>
+            <div id="mn_ex_seller_view_btn" data-ms-ex-ad-st="seller_search_button" data-ms-ex-adv-target="true" data-ms-ex-ad-st-type="0">
+                <img alt="出品者検索" class="modal_icon" src="data:image/png;base64,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">
+            <div class="__description">キーワード・地域から出品者を検索します</div></div>
+
+            <div id="ex_doc_open_btn">
+                <div data-an-func="ex_doc_open" data-an-type="image">
+                    <img class="mns_container_img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFcSURBVHjazJXtbcIwEIZNFiAbkA1KpfzHGyQbABPABk03CBMAG6QTNP0fqWYDRqAb9K56nV75MLGbVLV0shzbee7se89K/XEbNU3zQL0h26VpuhwCAkbNFonvC5qYDwAbczBkMY8jiupAfYH5HbzpszFsSnbioL4iJOgzdRUWVPCqj+ieqMsx1MT5+HGkZEeyRMB/A5uJk1vgJFULZDq84dA1vAuFTYTTnIx7OycjVPBijWFBG7NAZoUkMeJ/l0BA97jooCSi9VuRJDlO7luHjo3v2GjshXeAzYWzDHs5XxM59mt4ydCyo7gtrLgGcwJFEtmisLoj7lZWkJnyAgL6Ji69dNxnBTkdIS8VBAR0I7yvz4sC5KNvJYk3UBQFg1SvBSwT4l5bcTtfi4CKHyOJSuFE55dm5KmxTByvLYOGYI9d/xH5AJHqViKJLYNeD3BgrXwFSCOT/2/7FGAA7IGO9p+tHuIAAAAASUVORK5CYII=">
+                </div>
+            </div>
+            <div class="site_setting_link_area">
+
+                <a>
+                    <img class="mns_container_img" src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/doc_option_open_btn.png">
+                </a>
+            <div class="__description">新しいタブでドック設定ページを開きます</div></div>
+            <div class="close_btn_area" data-an-func="doc_close_btn" data-an-type="image">
+                <img class="mns_container_img" src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/doc_close_btn.png">
+            <div class="__description">ドックを最小化します([Ctrl(command)+Bキー]で一時的な表示/非表示)</div></div>
+
+        </section>
+        <section class="mns_ex_doc_field" data-an-comp="ex_doc">
+            <div id="ex_doc_close_btn" data-an-func="ex_doc_close" data-an-type="image">
+                <img class="mns_img_no_action" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAFcSURBVHjazJXtbcIwEIZNFiAbkA1KpfzHGyQbABPABk03CBMAG6QTNP0fqWYDRqAb9K56nV75MLGbVLV0shzbee7se89K/XEbNU3zQL0h26VpuhwCAkbNFonvC5qYDwAbczBkMY8jiupAfYH5HbzpszFsSnbioL4iJOgzdRUWVPCqj+ieqMsx1MT5+HGkZEeyRMB/A5uJk1vgJFULZDq84dA1vAuFTYTTnIx7OycjVPBijWFBG7NAZoUkMeJ/l0BA97jooCSi9VuRJDlO7luHjo3v2GjshXeAzYWzDHs5XxM59mt4ydCyo7gtrLgGcwJFEtmisLoj7lZWkJnyAgL6Ji69dNxnBTkdIS8VBAR0I7yvz4sC5KNvJYk3UBQFg1SvBSwT4l5bcTtfi4CKHyOJSuFE55dm5KmxTByvLYOGYI9d/xH5AJHqViKJLYNeD3BgrXwFSCOT/2/7FGAA7IGO9p+tHuIAAAAASUVORK5CYII=">
+            </div>
+        <ul id="mn_ex_doc_sub_Container"></ul></section>
+        <div class="open_btn_area upper_open _auto_close" data-an-func="doc_open" data-an-type="image" data-an-comp="close_setting">
+            <span id="search_comment"></span>
+            <img class="mns_img_no_action" src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/doc_open_btn.png">
+        </div>
+        <div class="open_btn_area downer_open _auto_close">
+            <img class="mns_img_no_action" src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/doc_open_btn.png">
+        </div>
+        <div id="event_">
+            <div class="open">
+
+            </div>
+            <div class="close">
+
+            </div>
+        </div>
+        <div id="text_field_area" class="text_field_area" style="display: none;">
+            <img src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/icon_img/title_edit_close.png" class="mns_container_img">
+        <div class="_mns_sub_title_container_text_area"><div id="_suggestion"><span class="_mns_sub_title_container_text_title">関連キーワード</span><span></span></div><span class="_mns_sub_title_container_text_title">選択キーワード</span><div><input></div></div></div>
+        <div id="description_field_area">
+
+        </div>
+    </div><div id="ms_ex_pro_advertisement" class="old" data-adv-override-type="0">
+    <div class="ms_ex_pro_advertisement_bk">
+    </div>
+    <div class="ms_ex_pro_advertisement_area">
+        <div class="ms_ex_pro_advertisement_wrapper">
+            <h3 class="ms_ex_pro_advertisement_title">
+            本機能はモノサーチ PROの機能です
+            </h3>
+            <h4 class="ms_ex_pro_advertisement_sub_title">
+            『利益が出そうな商品』の調査・『作業効率のアップ』に特化した多機能ツール
+            
+            </h4>
+            <div class="ms_ex_pro_advertisement_body">
+                <div class="ms_ex_pro_advertisement_content _left">
+                    <ul>
+                        <li>
+                        <div>
+                        ・アマゾン本体の在庫切れ・カート価格・ランキングを簡単に確認できます
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                        ・色々なサイトで価格変動を自動で追跡できます
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                        ・出品者の入荷・出荷の追跡ができます
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                        ・簡単に他社サイトを比較できます
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                        ・販売数・出品数(10日間)の表示ができます
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                        ・商品データのダウンロードができます
+                        </div>
+                        </li>
+                    </ul>
+            </div>
+                <div class="ms_ex_pro_advertisement_content _right">
+                    <a data-ms-ex-ad-send="true" href="http://mnsearch.com/lp/" target="_blank">
+                        <img src="chrome-extension://eadklkgmejdhldgchbmegmljdkchcdbd/templates/adv/adv_item_001.png">
+                    </a>
+                </div>
+                <div class="ms_ex_pro_advertisement_content center">
+                    <a data-ms-ex-ad-send="true" href="http://mnsearch.com/lp/" target="_blank">
+                        まずは14日間無料体験
+                    </a>
+                </div>
+            </div>
+            </div>
+    
+        </div>
+    </div>
+
+</body></html>
